@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="cbIsAdmin" prefHeight="902.0" prefWidth="1787.0" stylesheets="@../../styles/mainWindowStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject.controllers.ManageUsersController">
+   <children>
+      <TableView fx:id="tableUsers" layoutX="34.0" layoutY="87.0" prefHeight="659.0" prefWidth="1002.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" styleClass="col" text="Id" />
+          <TableColumn fx:id="name" prefWidth="186.0" styleClass="col" text="Nombre" />
+            <TableColumn fx:id="surname" prefWidth="281.0" styleClass="col" text="Apellidos" />
+            <TableColumn fx:id="userName" prefWidth="181.0" styleClass="col" text="Nombre de usuario" />
+            <TableColumn fx:id="licenseNumber" prefWidth="180.0" styleClass="col" text="Número de licencia" />
+            <TableColumn fx:id="admin" prefWidth="98.0" styleClass="col" text="Administrador" />
+        </columns>
+      </TableView>
+      <Button fx:id="btSave" layoutX="1452.0" layoutY="391.0" mnemonicParsing="false" onAction="#addUser" text="Agregar usuario" />
+      <Button fx:id="btRemoveUser" layoutX="1451.0" layoutY="447.0" mnemonicParsing="false" onAction="#removeUser" text="Eliminar Usuario" />
+      <Label layoutX="1195.0" layoutY="98.0" prefHeight="17.0" prefWidth="75.0" text="Nombre:" />
+      <Label layoutX="1188.0" layoutY="139.0" prefHeight="17.0" prefWidth="75.0" text="Apellidos:" />
+      <Label layoutX="1195.0" layoutY="184.0" prefHeight="17.0" prefWidth="75.0" text="Licencia:" />
+      <Label layoutX="1195.0" layoutY="229.0" prefHeight="17.0" prefWidth="75.0" text="Usuario:" />
+      <Label layoutX="1176.0" layoutY="273.0" prefHeight="17.0" prefWidth="75.0" text="Contraseña:" />
+      <TextField fx:id="txtName" layoutX="1289.0" layoutY="94.0" prefHeight="25.0" prefWidth="263.0" />
+      <TextField fx:id="txtSurname" layoutX="1289.0" layoutY="135.0" prefHeight="25.0" prefWidth="263.0" />
+      <TextField fx:id="txtLicenseNumber" layoutX="1289.0" layoutY="180.0" prefHeight="25.0" prefWidth="263.0" />
+      <TextField fx:id="txtUser" layoutX="1289.0" layoutY="225.0" prefHeight="25.0" prefWidth="263.0" />
+      <TextField fx:id="txtPassword" layoutX="1289.0" layoutY="269.0" prefHeight="25.0" prefWidth="263.0" />
+      <Label styleClass="error" fx:id="lblMessageSave" layoutX="1134.0" layoutY="362.0" prefHeight="17.0" prefWidth="419.0" />
+      <CheckBox fx:id="cbAdmin" layoutX="1442.0" layoutY="330.0" mnemonicParsing="false" text="Es administrador" />
+      <Label layoutX="1289.0" layoutY="43.0" styleClass="title" text="Agregar usuario" />
+      <Label layoutX="34.0" layoutY="43.0" styleClass="title" text="Usuarios" />
+   </children>
+</AnchorPane>

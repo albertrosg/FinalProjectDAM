@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="902.0" prefWidth="1787.0" fx:id="anchorPane" id="AnchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject.controllers.ProductController">
+   <children>
+      <TableView fx:id="tvProduct" layoutX="39.0" layoutY="91.0" prefHeight="384.0" prefWidth="1029.0">
+        <columns>
+          <TableColumn fx:id="tcProductId" prefWidth="135.0" text="Id de producto" />
+          <TableColumn fx:id="tcProductName" minWidth="0.0" prefWidth="404.0" text="Nombre" />
+            <TableColumn fx:id="tcProdcutPrice" prefWidth="196.0" text="Precio" />
+            <TableColumn fx:id="tcCriticalStock" prefWidth="151.0" text="Stock crítico" />
+            <TableColumn fx:id="tcStock" prefWidth="146.0" text="Stock actual" />
+        </columns>
+      </TableView>
+      <Label layoutX="1168.0" layoutY="111.0" text="Id de producto: " />
+      <Label layoutX="1204.0" layoutY="147.0" text="Nombre:" />
+      <Label layoutX="1211.0" layoutY="182.0" text="Precio:" />
+      <TextField fx:id="txtProductId" layoutX="1288.0" layoutY="107.0" prefHeight="25.0" prefWidth="355.0" />
+      <TextField fx:id="txtProductName" layoutX="1288.0" layoutY="143.0" prefHeight="25.0" prefWidth="355.0" />
+      <TextField fx:id="txtPrice" layoutX="1288.0" layoutY="178.0" prefHeight="25.0" prefWidth="355.0" />
+      <Button fx:id="btAddProduct" layoutX="1288.0" layoutY="261.0" mnemonicParsing="false" onAction="#addProduct" text="Agregar" />
+      <Button fx:id="btRemoveProduct" layoutX="1584.0" layoutY="261.0" mnemonicParsing="false" onAction="#removeProduct" text="Eliminar" />
+      <Label fx:id="lblMessageProduct" layoutX="1288.0" layoutY="222.0" prefHeight="17.0" prefWidth="355.0" />
+      <Label layoutX="1158.0" layoutY="554.0" text="Número de albarán:" />
+      <Label layoutX="1158.0" layoutY="589.0" text="Número de pedido:" />
+      <Label layoutX="1210.0" layoutY="624.0" text="Cantidad:" />
+      <TextField fx:id="txtDeliveryNote" layoutX="1288.0" layoutY="550.0" prefHeight="25.0" prefWidth="355.0" />
+      <TextField fx:id="txtOrderNum" layoutX="1288.0" layoutY="585.0" prefHeight="25.0" prefWidth="355.0" />
+      <TextField fx:id="txtAmount" layoutX="1288.0" layoutY="620.0" prefHeight="25.0" prefWidth="355.0" />
+      <Button fx:id="btAddOrder" layoutX="1292.0" layoutY="709.0" mnemonicParsing="false" onAction="#addOrder" text="Añadir" />
+      <Label fx:id="lblMessageOrder" layoutX="1288.0" layoutY="669.0" prefHeight="17.0" prefWidth="382.0" />
+      <Label layoutX="39.0" layoutY="14.0" styleClass="title" text="Productos" />
+      <Label layoutX="39.0" layoutY="51.0" text="Buscar: " />
+      <TextField fx:id="txtSearchProduct" layoutX="112.0" layoutY="47.0" prefHeight="25.0" prefWidth="302.0" />
+      <Separator layoutX="39.0" layoutY="496.0" prefHeight="5.0" prefWidth="1632.0" />
+      <Label fx:id="lblOrder" layoutX="39.0" layoutY="513.0" styleClass="title" text="Pedidos" />
+      <TableView fx:id="tvOrder" layoutX="39.0" layoutY="554.0" prefHeight="310.0" prefWidth="1029.0">
+        <columns>
+          <TableColumn fx:id="tcOrderNum" minWidth="2.0" prefWidth="282.0" text="Número de pedido" />
+            <TableColumn fx:id="tcDeliveryNote" prefWidth="268.0" text="Albarán" />
+            <TableColumn fx:id="tcDate" prefWidth="120.0" text="Fecha" />
+            <TableColumn fx:id="tcAmount" prefWidth="102.0" text="Cantidad" />
+        </columns>
+      </TableView>
+      <Label layoutX="1288.0" layoutY="14.0" styleClass="title" text="Anadir producto" />
+      <Label layoutX="1288.0" layoutY="513.0" styleClass="title" text="Añadir pedido" />
+   </children>
+</AnchorPane>

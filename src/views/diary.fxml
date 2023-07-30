@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="902.0" prefWidth="1787.0" id="AnchorPane" fx:id="anchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject.controllers.DiaryController">
+   <children>
+      <Label layoutX="175.0" layoutY="101.0" text="Buscar: " />
+      <DatePicker fx:id="dpDateDiary" layoutX="235.0" layoutY="98.0" prefHeight="26.0" prefWidth="217.0" />
+      <TableView fx:id="tvDiary" layoutX="175.0" layoutY="163.0" prefHeight="610.0" prefWidth="1221.0">
+        <columns>
+            <TableColumn fx:id="tcDate" prefWidth="194.0" text="Fecha" />
+            <TableColumn fx:id="tcHour" prefWidth="177.0" text="Hora" />
+          <TableColumn fx:id="tcPetName" prefWidth="159.0" text="Nombre mascota" />
+          <TableColumn fx:id="tcOwnerName" minWidth="7.0" prefWidth="182.0" text="Nombre propietario" />
+            <TableColumn fx:id="tcVisitType" prefWidth="172.0" text="Tipo de visita" />
+            <TableColumn fx:id="tcComment" prefWidth="336.0" text="Motivo" />
+        </columns>
+      </TableView>
+      <Button layoutX="1524.0" layoutY="222.0" mnemonicParsing="false" onAction="#addVisit" text="Agregar visita" />
+      <Label layoutX="175.0" layoutY="35.0" styleClass="title" text="Agenda" />
+      <Button fx:id="btRemoveVisit" layoutX="1524.0" layoutY="320.0" mnemonicParsing="false" onAction="#removeVisit" text="Eliminar visita" />
+   </children>
+</AnchorPane>

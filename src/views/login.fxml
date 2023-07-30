@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="background" prefHeight="526.0" prefWidth="460.0" stylesheets="@../styles/styleLogin.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject.controllers.LoginController">
+   <children>
+      <Button fx:id="btExit" layoutX="324.0" layoutY="455.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="96.0"  text="Salir" />
+      <Button fx:id="btAccess" layoutX="60.0" layoutY="455.0" mnemonicParsing="false" onAction="#access" prefHeight="25.0" prefWidth="96.0"  text="Acceder" />
+      <Label layoutX="85.0" layoutY="311.0" text="Usuario:" />        
+      <Label layoutX="60.0" layoutY="354.0" text="Contraseña: " />        
+      <PasswordField fx:id="txtPassword" layoutX="193.0" layoutY="355.0" prefHeight="25.0" prefWidth="244.0" styleClass="text"  />
+      <TextField fx:id="txtUser" layoutX="193.0" layoutY="312.0" prefHeight="25.0" prefWidth="244.0" styleClass="text"  />
+      <ImageView id="imageLogin" fx:id="vetImg" fitHeight="405.0" fitWidth="200.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Label id="error" fx:id="lblError" layoutX="80.0" layoutY="403.0" prefHeight="17.0" prefWidth="357.0" textAlignment="RIGHT" />
+      <ImageView fx:id="imgLogin" fitHeight="150.0" fitWidth="200.0" layoutX="230.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

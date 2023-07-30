@@ -1,0 +1,23 @@
+#background{-fx-background-color: gray}
+
+#imageLogin {-fx-background-image:url("../images/VetImage.jpg")}
+
+Label{-fx-text-fill: #FFFFFF;
+      -fx-font-size: 18px;
+      -fx-font-family: "System Bold Italic";      
+      -fx-font-weight: bold;
+      -fx-font-style: italic;      
+}
+
+Button{-fx-background-color: #4AE9F6;
+       -fx-font-size: 18px;
+       -fx-font-weight: bold;
+}
+
+.text{-fx-background-color: #4AE9F6;
+     -fx-text-fill: #000000;
+     -fx-font-weight: bold;
+}
+
+#error{-fx-text-fill: #F41100}
+

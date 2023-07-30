@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="902.0" prefWidth="1787.0" id="AnchorPane" fx:id="anchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject.controllers.EntryController">
+   <children>
+      <Label styleClass="title" layoutX="1271.0" layoutY="38.0" text="Historial:"/>        
+      <Label styleClass="title" layoutX="63.0" layoutY="38.0" text="Datos de la mascota:"/>       
+      <Label layoutX="63.0" layoutY="79.0" text="Nombre:" />
+      <Label layoutX="63.0" layoutY="120.0" text="Sexo:" />
+      <Label layoutX="63.0" layoutY="161.0" text="Tipo:" />
+      <TextField fx:id="txtNamePet" layoutX="122.0" layoutY="75.0" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="txtSexPet" layoutX="122.0" layoutY="116.0" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="txtTypePet" layoutX="122.0" layoutY="157.0" prefHeight="25.0" prefWidth="235.0" />
+      <Label layoutX="405.0" layoutY="79.0" text="Número de chip:" />
+      <Label layoutX="466.0" layoutY="120.0" text="Peso:" />
+      <Label layoutX="466.0" layoutY="161.0" text="Raza:" />
+      <TextField fx:id="txtChipNumber" layoutX="512.0" layoutY="75.0" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="txtWeightPet" layoutX="512.0" layoutY="116.0" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="txtRacePet" layoutX="512.0" layoutY="157.0" prefHeight="25.0" prefWidth="235.0" />
+      <Label layoutX="777.0" layoutY="79.0" text="Fecha de nacimiento:" />
+      <Label layoutX="861.0" layoutY="120.0" text="Edad:" />
+      <TextField fx:id="txtDateBirth" layoutX="907.0" layoutY="75.0" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="txtAgePet" layoutX="907.0" layoutY="116.0" prefHeight="25.0" prefWidth="235.0" />
+      <Separator layoutX="47.0" layoutY="233.0" prefHeight="4.0" prefWidth="1176.0" />
+      <Label styleClass="title" layoutX="63.0" layoutY="285.0" text="Visita:"/>
+      <TextArea fx:id="txtCommentVisit" layoutX="63.0" layoutY="315.0" prefHeight="528.0" prefWidth="1082.0" />
+      <Separator layoutX="1236.0" layoutY="20.0" orientation="VERTICAL" prefHeight="862.0" prefWidth="16.0" />
+      <Button fx:id="btAddEntry" layoutX="63.0" layoutY="857.0" mnemonicParsing="false" onAction="#addEntry" text="Agregar al historial" />
+      <ScrollPane fx:id="scpEntries" layoutX="1271.0" layoutY="70.0" prefHeight="777.0" prefWidth="490.0" />
+      <Button fx:id="btPay" layoutX="1093.0" layoutY="857.0" mnemonicParsing="false" onAction="#pay" text="Cobrar" />
+   </children>
+</AnchorPane>

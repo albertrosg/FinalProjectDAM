@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="1000.0" prefWidth="1916.0" fx:id="mainBorderPane"  stylesheets="@../styles/mainWindowStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject.controllers.MainWindowController">
+   <top>
+      <AnchorPane prefHeight="93.0" prefWidth="1916.0" fx:id="topAnchorPane" id="top"  BorderPane.alignment="CENTER">
+         <children>
+            <ImageView id="imgIcon" fx:id="imgIcon" fitHeight="98.0" fitWidth="138.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="lblWelcome" layoutX="1481.0" layoutY="32.0" prefHeight="17.0" prefWidth="429.0" textAlignment="RIGHT" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="902.0" prefWidth="129.0" fx:id="leftAnchorPane" id="left"  BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btLogout" layoutX="14.0" layoutY="784.0" mnemonicParsing="false" onAction="#logout" text="Desconectar" />
+            <Button fx:id="btExit" layoutX="14.0" layoutY="833.0" mnemonicParsing="false" onAction="#exit" text="Salir" />
+            <VBox prefHeight="666.0" prefWidth="100.0" fx:id="vbMainLeft"  />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <FlowPane prefHeight="1787" prefWidth="902" fx:id="flowPane"  BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

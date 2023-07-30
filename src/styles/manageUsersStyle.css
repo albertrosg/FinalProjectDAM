@@ -1,0 +1,7 @@
+.col {-fx-text-alignment: center;}
+Button:hover{
+    -fx-background-color: red;
+}
+
+#lblMessageSave {-fx-text-fill: red;}
+
