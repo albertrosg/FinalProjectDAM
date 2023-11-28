@@ -27,7 +27,7 @@ public class Entry {
     
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name="entryId")
+    @Column (name="entry_id")
     private int entryId;
     
     @Column (name="date")
@@ -40,7 +40,7 @@ public class Entry {
     private LocalTime hour;
     
     @ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name="chipNumber")
+    @JoinColumn(name="chip_number")
     private Pet pet;
 
     public Entry() {

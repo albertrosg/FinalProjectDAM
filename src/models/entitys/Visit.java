@@ -28,7 +28,7 @@ public class Visit implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="visitId")
+    @Column(name="visit_id")
     private int visitId;
     
     @Column(name="type")
@@ -44,15 +44,15 @@ public class Visit implements Serializable{
     private String comment;
     
     @ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name="userId")
+    @JoinColumn(name="user_id")
     private User user;
     
     @ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name="chipNumber")
+    @JoinColumn(name="chip_number")
     private Pet pet;
     
     @ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name="ownerId")
+    @JoinColumn(name="owner_id")
     private Owner owner;
 
     public Visit() {

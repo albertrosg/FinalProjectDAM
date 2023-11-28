@@ -27,7 +27,7 @@ public class Order {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="orderId")
+    @Column(name="order_id")
     private int orderId;
     
     @Column(name="date")
@@ -36,14 +36,14 @@ public class Order {
     @Column(name="amount")
     private int amount;
     
-    @Column(name="deliveryNote")
+    @Column(name="delivery_note")
     private String deliveryNote;
     
-    @Column(name="orderNum")    
+    @Column(name="order_num")    
     private int orderNum;
     
     @ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name="productId")
+    @JoinColumn(name="product_id")
     private Product product;
 
     public Order() {

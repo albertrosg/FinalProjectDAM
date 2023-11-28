@@ -61,6 +61,8 @@ public class LoginController extends KeyAdapter implements Initializable{
         
         try{
             
+            
+            
             txtUser.setText("albros");
             txtPassword.setText("1234");
         

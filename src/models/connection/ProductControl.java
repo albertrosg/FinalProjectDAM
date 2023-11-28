@@ -186,7 +186,7 @@ public class ProductControl {
             
             Product product = e.getRowValue();
             
-            String hql = "from Product where productId = '" + product.getProductId() + "'";
+            String hql = "from Product where product_id = '" + product.getProductId() + "'";
             
             Product temporalProduct = (Product) session.createQuery(hql).getSingleResult();
             
@@ -216,7 +216,7 @@ public class ProductControl {
             
             Product product = e.getRowValue();
             
-            String hql = "from Product where productId = '" + product.getProductId() + "'";
+            String hql = "from Product where product_id = '" + product.getProductId() + "'";
             
             Product temporalProduct = (Product) session.createQuery(hql).getSingleResult();
             

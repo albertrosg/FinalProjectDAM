@@ -64,7 +64,7 @@ public class VisitControl {
 
             tx = session.beginTransaction();
             
-            String hql = "from Visit where userId = :id and hour = :hour and date = :date order by date, hour";
+            String hql = "from Visit where user_id = :id and hour = :hour and date = :date order by date, hour";
             
             for (LocalTime busyHour : hours){   
                 
@@ -111,7 +111,7 @@ public class VisitControl {
         
             tx = session.beginTransaction();
             
-            Query query = session.createQuery("from Visit where visitId = :id");
+            Query query = session.createQuery("from Visit where visit_id = :id");
             
             query.setParameter("id", id);
             
@@ -139,7 +139,7 @@ public class VisitControl {
 
             tx = session.beginTransaction();
 
-            String hql = "select hour from Visit where date = :date and userId = :userId";
+            String hql = "select hour from Visit where date = :date and user_id = :userId";
 
             Query query = session.createQuery(hql);
 
@@ -190,7 +190,7 @@ public class VisitControl {
 
             tx = session.beginTransaction();
             
-            String hql = "delete from Visit where visitId = :id";
+            String hql = "delete from Visit where visit_id = :id";
             
             Query query = session.createQuery(hql);
             query.setParameter("id", id);            

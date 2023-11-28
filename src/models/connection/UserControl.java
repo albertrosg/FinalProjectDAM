@@ -181,7 +181,7 @@ public class UserControl {
                     break;
                 case "userName":
 
-                    if (event.getNewValue().equals(getUnique("userName"))) found = true;            
+                    if (event.getNewValue().equals(getUnique("user_name"))) found = true;            
 
                     if (!found) {
                         temporalUser.setUserName(event.getNewValue());
@@ -195,7 +195,7 @@ public class UserControl {
 
                 case "licenseNumber":
 
-                    if (event.getNewValue().equals(getUnique("licenseNumber"))) found = true;                       
+                    if (event.getNewValue().equals(getUnique("license_number"))) found = true;                       
                     
                     if (!found) {
                         if (new Validation().licenseNumberValidate(event.getNewValue())) {

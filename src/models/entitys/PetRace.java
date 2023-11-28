@@ -26,14 +26,14 @@ public class PetRace {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="raceId")
+    @Column(name="race_id")
     private int raceId;
     
-    @Column(name="nameRace")
+    @Column(name="name_race")
     private String nameRace;
     
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name="typeId")
+    @JoinColumn(name="type_id")
     private PetType petType;
 
     public PetRace() {

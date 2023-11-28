@@ -66,7 +66,7 @@ public class PetControl {
             
             tx = session.beginTransaction();
             
-            list = session.createQuery("from Pet where ownerId=" + id).getResultList();
+            list = session.createQuery("from Pet where owner_id=" + id).getResultList();
             
             for (Pet pet : list){
                 
@@ -100,7 +100,7 @@ public class PetControl {
             
             tx = session.beginTransaction();
             
-            return (Pet) session.createQuery("from Pet where chipNumber='" + chipNumber + "'").getSingleResult(); 
+            return (Pet) session.createQuery("from Pet where chip_number='" + chipNumber + "'").getSingleResult(); 
             
             
         }finally{
@@ -142,7 +142,7 @@ public class PetControl {
 
             String id = pet.getChipNumber();
 
-            Query query = session.createQuery("from Pet where chipNumber = :id");
+            Query query = session.createQuery("from Pet where chip_number = :id");
 
             query.setParameter("id", id);
 

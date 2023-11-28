@@ -27,7 +27,7 @@ public class Owner implements Serializable{
     
     @Id    
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="ownerId")
+    @Column(name="owner_id")
     private int ownerId;        
     
     @Column (name="dni", unique=true)    
@@ -43,7 +43,7 @@ public class Owner implements Serializable{
     private String email;
     
     
-    @Column (name="phoneNumber")
+    @Column (name="phone_number")
     private String phoneNumber;    
     
     @Column (name="address")

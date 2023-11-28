@@ -60,7 +60,7 @@ public class OrderControl {
         
         try{
             
-            List<Order> list = session.createQuery("from Order where productId = '" + product.getProductId() + "'").getResultList();
+            List<Order> list = session.createQuery("from Order where product_id = '" + product.getProductId() + "'").getResultList();
             
             for (Order order : list){              
                 

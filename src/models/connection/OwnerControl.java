@@ -118,7 +118,7 @@ public class OwnerControl {
             
             tx = session.beginTransaction();
             
-            owner = (Owner) session.createQuery("from Owner where ownerId =" + id).getSingleResult();
+            owner = (Owner) session.createQuery("from Owner where owner_id =" + id).getSingleResult();
             
             tx.commit();
             

@@ -26,10 +26,10 @@ public class PetType {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="typeId")
+    @Column(name="type_id")
     private int typeId;
     
-    @Column(name="nameType")
+    @Column(name="name_type")
     private String nameType;
     
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "petType", cascade = CascadeType.ALL)

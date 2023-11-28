@@ -33,11 +33,11 @@ public class TypeControl {
 
             session.beginTransaction();
 
-            PetType petType = (PetType) session.createQuery("from PetType where nameType='" + typeName + "'").getSingleResult();
+            PetType petType = (PetType) session.createQuery("from PetType where name_type='" + typeName + "'").getSingleResult();
 
             int type = petType.getTypeId();
 
-            list = session.createQuery("from PetRace where typeId='" + type + "'").getResultList();
+            list = session.createQuery("from PetRace where type_id='" + type + "'").getResultList();
 
             for (PetRace petRace : list) {
 

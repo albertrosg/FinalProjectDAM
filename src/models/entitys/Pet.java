@@ -26,7 +26,7 @@ import javax.persistence.Table;
 public class Pet implements Serializable{
     
     @Id
-    @Column(name="chipNumber", unique = true)
+    @Column(name="chip_number", unique = true)
     private String chipNumber;
     
     @Column(name="name")
@@ -41,14 +41,14 @@ public class Pet implements Serializable{
     @Column(name="weight")
     private double weight;
     
-    @Column(name="birthDate")
+    @Column(name="birth_date")
     private LocalDate birthDate;
     
     @Column(name="sex")
     private String sex;
     
     @ManyToOne(cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name="ownerId")
+    @JoinColumn(name="owner_id")
     private Owner owner;
     
     @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL)

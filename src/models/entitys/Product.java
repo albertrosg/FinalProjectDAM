@@ -24,7 +24,7 @@ import javax.persistence.Table;
 public class Product {
     
     @Id
-    @Column(name="productId")
+    @Column(name="product_id")
     private String productId;
     
     @Column (name="name")
@@ -36,7 +36,7 @@ public class Product {
     @Column (name="stock")
     private int stock;
     
-    @Column (name="criticalStock")
+    @Column (name="critical_stock")
     private int criticalStock;
     
     @OneToMany (fetch = FetchType.EAGER, mappedBy = "product", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})    
